@@ -6,7 +6,7 @@ const Navbar = ({logo_description, title}) => {
     //allow site to display the default props, if no props are specified at the parent
 
     return(
-        <div className = "navbar bg-primary">
+        <div className = "navbar">
             <img
                 src = {logo}
                 alt = {logo_description}

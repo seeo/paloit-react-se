@@ -10,7 +10,6 @@ class App extends Component {
                 <Navbar />
 
                     <div className = "form-container">
-                        <h2>Hello PALO IT</h2>
                         <OrderForm />
                     </div>
 
