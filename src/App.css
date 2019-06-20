@@ -15,7 +15,13 @@
 }
 
 /* Utilities */
-.container {
+.background-container{
+	background-image: url("./images/home.jpg");
+	background-repeat:no-repeat;
+	min-height: 100%;
+}
+
+.form-container {
 	max-width: 500px;
 	margin: auto;
 	overflow: hidden;

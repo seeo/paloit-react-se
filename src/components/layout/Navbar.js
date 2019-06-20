@@ -12,6 +12,7 @@ const Navbar = ({logo_description, title}) => {
                 alt = {logo_description}
             />
             <h3> {title}</h3>
+
         </div>
     )
 }

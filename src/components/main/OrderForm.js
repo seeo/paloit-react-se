@@ -9,12 +9,22 @@ export class OrderForm extends Component {
             phoneNumber: '',
             country: 'SG',
             email: '',
+            address: '',
+            numCopiesForOne: 0,
+            numCopiesForTwo: 0,
+            numCopiesForThree: 0,
+            numCopiesForFour: 0,
+            numCopiesForFive: 0,
         }
     }
     render() {
         return (
             <div>
-
+                <h3>Your order:</h3>
+                <form>
+                    Last name:
+                    <input type="text" value={this.state.lastName} onChange={this.handleChange} />
+                </form>
             </div>
         )
     }
