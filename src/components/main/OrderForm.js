@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import Select from 'react-select';
 
 export class OrderForm extends Component {
@@ -30,27 +29,139 @@ export class OrderForm extends Component {
             <div>
                 <h3>Your order:</h3>
                 <form className = "order-form">
-                    Last name:
-                    <input type="text" name="lastName" className = "form-control" value={this.state.lastName} onChange={this.handleChange} />
-                    First name:
-                    <input type="text" name="firstName" className = "form-control" value={this.state.firstName} onChange={this.handleChange} />
-                    Phone Number:
-                    <input type="text" name="phoneNumber" className = "form-control" value={this.state.phoneNumber} onChange={this.handleChange} />
-                    Country:
-                    <Select options = {countryList} name="country" className = "form-control" value={this.state.country} onChange={this.handleChange} />
+                    <div>
+                        Last name:
+                        <input type="text" name="lastName" className = "form-control" value={this.state.lastName} onChange={this.handleChange} />
+                    </div>
+                    <div>
+                        First name:
+                        <input type="text" name="firstName" className = "form-control" value={this.state.firstName} onChange={this.handleChange} />
+                    </div>
+                    <div>
+                        Phone Number:
+                        <input type="number" name="phoneNumber" className = "form-control" value={this.state.phoneNumber} onChange={this.handleChange} />
+                    </div>
+                    <div>
+                        Country:
+                        <div className = "form-dropdown" >
+                        <select name="country" value={this.state.value} onChange={this.handleChange}>
+                            <option value="SG">SG</option>
+                            <option value="HK">HK</option>
+                        </select>
+                        </div>
+                    </div>
+                    <div>
                     Email:
                     <input type="email" name="email" className = "form-control" value={this.state.email} onChange={this.handleChange} />
-
+                    </div>
+                    <div>
+                    Address:
+                    <input type="text" name="address" className = "form-control" value={this.state.address} onChange={this.handleChange} />
+                    </div>
+                    <div>
+                        Number of copies for #1:
+                        <div className = "form-dropdown" >
+                            <select name="numCopiesForOne" value={this.state.numCopiesForOne} onChange={this.handleChange}>
+                                <option value = "0" > 0 </option>
+                                <option value = "1" > 1 </option>
+                                <option value = "2" > 2 </option>
+                                <option value = "3" > 3 </option>
+                                <option value = "4" > 4 </option>
+                                <option value = "5" > 5 </option>
+                                <option value = "6" > 6 </option>
+                                <option value = "7" > 7 </option>
+                                <option value = "8" > 8 </option>
+                                <option value = "9" > 9 </option>
+                                <option value = "10" > 10 </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                    Number of copies for #2:
+                        <div className = "form-dropdown" >
+                        <select name="numCopiesForTwo" value={this.state.numCopiesForTwo} onChange={this.handleChange}>
+                            <option value = "0" > 0 </option>
+                            <option value = "1" > 1 </option>
+                            <option value = "2" > 2 </option>
+                            <option value = "3" > 3 </option>
+                            <option value = "4" > 4 </option>
+                            <option value = "5" > 5 </option>
+                            <option value = "6" > 6 </option>
+                            <option value = "7" > 7 </option>
+                            <option value = "8" > 8 </option>
+                            <option value = "9" > 9 </option>
+                            <option value = "10" > 10 </option>
+                        </select>
+                        </div>
+                    </div>
+                    Number of copies for #3:
+                    <div className = "form-dropdown" >
+                    <select  name="numCopiesForThree" value={this.state.numCopiesForThree} onChange={this.handleChange}>
+                        <option value = "0" > 0 </option>
+                        <option value = "1" > 1 </option>
+                        <option value = "2" > 2 </option>
+                        <option value = "3" > 3 </option>
+                        <option value = "4" > 4 </option>
+                        <option value = "5" > 5 </option>
+                        <option value = "6" > 6 </option>
+                        <option value = "7" > 7 </option>
+                        <option value = "8" > 8 </option>
+                        <option value = "9" > 9 </option>
+                        <option value = "10" > 10 </option>
+                    </select>
+                    </div>
+                    Number of copies for #4:
+                    <div className = "form-dropdown" >
+                    <select name="numCopiesForFour" value={this.state.numCopiesForFour} onChange={this.handleChange}>
+                        <option value = "0" > 0 </option>
+                        <option value = "1" > 1 </option>
+                        <option value = "2" > 2 </option>
+                        <option value = "3" > 3 </option>
+                        <option value = "4" > 4 </option>
+                        <option value = "5" > 5 </option>
+                        <option value = "6" > 6 </option>
+                        <option value = "7" > 7 </option>
+                        <option value = "8" > 8 </option>
+                        <option value = "9" > 9 </option>
+                        <option value = "10" > 10 </option>
+                    </select>
+                    </div>
+                    Number of copies for #5:
+                    <div className = "form-dropdown" >
+                    <select name="numCopiesForFive" value={this.state.numCopiesForFive} onChange={this.handleChange}>
+                        <option value = "0" > 0 </option>
+                        <option value = "1" > 1 </option>
+                        <option value = "2" > 2 </option>
+                        <option value = "3" > 3 </option>
+                        <option value = "4" > 4 </option>
+                        <option value = "5" > 5 </option>
+                        <option value = "6" > 6 </option>
+                        <option value = "7" > 7 </option>
+                        <option value = "8" > 8 </option>
+                        <option value = "9" > 9 </option>
+                        <option value = "10" > 10 </option>
+                    </select>
+                    </div>
                 </form>
             </div>
         )
     }
 }
 
-const countryList = [
-    {label: "SG", value: 1},
-    {label: "HK", value: 2},
-]
+const quantity = [
+    {label: '1', value: 1},
+    {label: '2', value: 2},
+    {label: '3', value: 3},
+    {label: '4', value: 4},
+    {label: '5', value: 5},
+    {label: '6', value: 6},
+    {label: '7', value: 7},
+    {label: '8', value: 8},
+    {label: '9', value: 9},
+    {label: '10', value: 10},
+];
+
+
 
 OrderForm.propTypes = {
     // lastName: PropTypes.string.isRequired,
