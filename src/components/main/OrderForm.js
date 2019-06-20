@@ -2,29 +2,29 @@ import React, { Component } from 'react';
 
 
 export class OrderForm extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            lastName: '',
-            firstName: '',
-            phoneNumber: '',
-            country: 'SG',
-            email: '',
-            address: '',
-            numCopiesForOne: 0,
-            numCopiesForTwo: 0,
-            numCopiesForThree: 0,
-            numCopiesForFour: 0,
-            numCopiesForFive: 0,
-        }
-    }
+    // constructor(props) {
+    //     super(props)
+    //     this.state = {
+    //         lastName: '',
+    //         firstName: '',
+    //         phoneNumber: '',
+    //         country: 'SG',
+    //         email: '',
+    //         address: '',
+    //         numCopiesForOne: 0,
+    //         numCopiesForTwo: 0,
+    //         numCopiesForThree: 0,
+    //         numCopiesForFour: 0,
+    //         numCopiesForFive: 0,
+    //     }
+    // }
      handleChange = (e) => {
         this.setState({ [e.target.name]: e.target.value });
     }
 
     handleSubmit = (e) => {
         e.preventDefault();
-        this.props.searchUsers(this.state.text);
+        this.props.searchUsers(this.props.text);
         this.setState({text: ''});
     }
 
@@ -35,20 +35,20 @@ export class OrderForm extends Component {
                 <form className = "order-form" onSubmit = {this.handleSubmit} >
                     <div>
                         Last name:
-                        <input type="text" name="lastName" className = "form-control" value={this.state.lastName} onChange={this.handleChange} />
+                        <input type="text" name="lastName" className = "form-control" value={this.props.lastName} onChange={this.handleChange} />
                     </div>
                     <div>
                         First name:
-                        <input type="text" name="firstName" className = "form-control" value={this.state.firstName} onChange={this.handleChange} />
+                        <input type="text" name="firstName" className = "form-control" value={this.props.firstName} onChange={this.handleChange} />
                     </div>
                     <div>
                         Phone Number:
-                        <input type="number" name="phoneNumber" className = "form-control" value={this.state.phoneNumber} onChange={this.handleChange} />
+                        <input type="number" name="phoneNumber" className = "form-control" value={this.props.phoneNumber} onChange={this.handleChange} />
                     </div>
                     <div>
                         Country:
                         <div className = "form-dropdown" >
-                        <select name="country" value={this.state.value} onChange={this.handleChange}>
+                        <select name="country" value={this.props.value} onChange={this.handleChange}>
                             <option value="SG">SG</option>
                             <option value="HK">HK</option>
                         </select>
@@ -56,16 +56,16 @@ export class OrderForm extends Component {
                     </div>
                     <div>
                     Email:
-                    <input type="email" name="email" className = "form-control" value={this.state.email} onChange={this.handleChange} />
+                    <input type="email" name="email" className = "form-control" value={this.props.email} onChange={this.handleChange} />
                     </div>
                     <div>
                     Address:
-                    <input type="text" name="address" className = "form-control" value={this.state.address} onChange={this.handleChange} />
+                    <input type="text" name="address" className = "form-control" value={this.props.address} onChange={this.handleChange} />
                     </div>
                     <div>
                         Number of copies for #1:
                         <div className = "form-dropdown" >
-                            <select name="numCopiesForOne" value={this.state.numCopiesForOne} onChange={this.handleChange}>
+                            <select name="numCopiesForOne" value={this.props.numCopiesForOne} onChange={this.handleChange}>
                                 <option value = "0" > 0 </option>
                                 <option value = "1" > 1 </option>
                                 <option value = "2" > 2 </option>
@@ -83,7 +83,7 @@ export class OrderForm extends Component {
                     <div>
                     Number of copies for #2:
                         <div className = "form-dropdown" >
-                        <select name="numCopiesForTwo" value={this.state.numCopiesForTwo} onChange={this.handleChange}>
+                        <select name="numCopiesForTwo" value={this.props.numCopiesForTwo} onChange={this.handleChange}>
                             <option value = "0" > 0 </option>
                             <option value = "1" > 1 </option>
                             <option value = "2" > 2 </option>
@@ -100,7 +100,7 @@ export class OrderForm extends Component {
                     </div>
                     Number of copies for #3:
                     <div className = "form-dropdown" >
-                    <select  name="numCopiesForThree" value={this.state.numCopiesForThree} onChange={this.handleChange}>
+                    <select  name="numCopiesForThree" value={this.props.numCopiesForThree} onChange={this.handleChange}>
                         <option value = "0" > 0 </option>
                         <option value = "1" > 1 </option>
                         <option value = "2" > 2 </option>
@@ -116,7 +116,7 @@ export class OrderForm extends Component {
                     </div>
                     Number of copies for #4:
                     <div className = "form-dropdown" >
-                    <select name="numCopiesForFour" value={this.state.numCopiesForFour} onChange={this.handleChange}>
+                    <select name="numCopiesForFour" value={this.props.numCopiesForFour} onChange={this.handleChange}>
                         <option value = "0" > 0 </option>
                         <option value = "1" > 1 </option>
                         <option value = "2" > 2 </option>
@@ -132,7 +132,7 @@ export class OrderForm extends Component {
                     </div>
                     Number of copies for #5:
                     <div className = "form-dropdown" >
-                    <select name="numCopiesForFive" value={this.state.numCopiesForFive} onChange={this.handleChange}>
+                    <select name="numCopiesForFive" value={this.props.numCopiesForFive} onChange={this.handleChange}>
                         <option value = "0" > 0 </option>
                         <option value = "1" > 1 </option>
                         <option value = "2" > 2 </option>

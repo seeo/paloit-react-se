@@ -4,6 +4,22 @@ import OrderForm from './components/main/OrderForm';
 import './App.css';
 
 class App extends Component {
+    constructor(props){
+        super(props);
+         this.state = {
+             lastName: '',
+             firstName: '',
+             phoneNumber: '',
+             country: 'SG',
+             email: '',
+             address: '',
+             numCopiesForOne: 0,
+             numCopiesForTwo: 0,
+             numCopiesForThree: 0,
+             numCopiesForFour: 0,
+             numCopiesForFive: 0,
+         }
+    }
     render(){
         return (
             <div className = "App">
