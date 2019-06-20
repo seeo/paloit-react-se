@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Select from 'react-select';
+
 
 export class OrderForm extends Component {
     constructor(props) {
@@ -17,18 +17,22 @@ export class OrderForm extends Component {
             numCopiesForFour: 0,
             numCopiesForFive: 0,
         }
-
     }
-
      handleChange = (e) => {
         this.setState({ [e.target.name]: e.target.value });
+    }
+
+    handleSubmit = (e) => {
+        e.preventDefault();
+        this.props.searchUsers(this.state.text);
+        this.setState({text: ''});
     }
 
     render() {
         return (
             <div>
                 <h3>Your order:</h3>
-                <form className = "order-form">
+                <form className = "order-form" onSubmit = {this.handleSubmit} >
                     <div>
                         Last name:
                         <input type="text" name="lastName" className = "form-control" value={this.state.lastName} onChange={this.handleChange} />
@@ -142,24 +146,27 @@ export class OrderForm extends Component {
                         <option value = "10" > 10 </option>
                     </select>
                     </div>
+                    <div className = "btn-add-to-cart">
+                        <input type="submit" value = "Add to cart" className = "btn btn-success" />
+                    </div>
                 </form>
             </div>
         )
     }
 }
 
-const quantity = [
-    {label: '1', value: 1},
-    {label: '2', value: 2},
-    {label: '3', value: 3},
-    {label: '4', value: 4},
-    {label: '5', value: 5},
-    {label: '6', value: 6},
-    {label: '7', value: 7},
-    {label: '8', value: 8},
-    {label: '9', value: 9},
-    {label: '10', value: 10},
-];
+// const quantity = [
+//     {label: '1', value: 1},
+//     {label: '2', value: 2},
+//     {label: '3', value: 3},
+//     {label: '4', value: 4},
+//     {label: '5', value: 5},
+//     {label: '6', value: 6},
+//     {label: '7', value: 7},
+//     {label: '8', value: 8},
+//     {label: '9', value: 9},
+//     {label: '10', value: 10},
+// ];
 
 
 

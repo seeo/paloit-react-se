@@ -35,6 +35,11 @@
 
 .order-form{
 	text-align: left;
+	overflow: scroll;
+}
+
+.btn-add-to-cart{
+	text-align: center;
 }
 
 @keyframes App-logo-spin {
