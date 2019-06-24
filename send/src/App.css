@@ -1,0 +1,52 @@
+.App {
+  text-align: center;
+}
+
+/* Navbar */
+.navbar {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 0.7rem 2rem;
+	z-index: 1;
+	width: 100%;
+	opacity: 0.9;
+	margin-bottom: 1rem;
+}
+
+/* Utilities */
+.background-container{
+	background-image: url("./images/home.jpg");
+	background-repeat:no-repeat;
+	background-size: contain;
+}
+
+.form-container {
+	max-width: 500px;
+	margin: auto;
+	overflow: hidden;
+	padding: 0 2rem;
+	border-radius: 30px;
+	border-color: lightgrey;
+	border-style: solid;
+	border-width: thin;
+	background-color: #fff;
+}
+
+.order-form{
+	text-align: left;
+	overflow: scroll;
+}
+
+.btn-add-to-cart{
+	text-align: center;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
